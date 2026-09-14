@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: canada-economic-monitor
+    runtime: static
+    buildCommand: python3 app.py build --refresh --strict
+    staticPublishPath: ./dist
+    autoDeployTrigger: commit

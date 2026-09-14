@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore Canadian and U.S. economic conditions, construction, input costs and trade using official public data. Includes Python-powered quarterly outlooks and business scenarios.">
+<meta name="theme-color" content="#12384b"><title>Canada Economic Monitor</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2312384b'/%3E%3Cpath d='M7 24V17h4v7zm7 0V11h4v13zm7 0V6h4v18z' fill='%235cd8c3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to dashboard</a>
+<aside class="sidebar">
+ <a class="brand" href="#overview"><span class="brandmark" aria-hidden="true">▥</span><span>Canada<br>Economic Monitor</span></a>
+ <nav aria-label="Dashboard views" id="navigation">
+  <button data-view="overview" class="active"><span aria-hidden="true">01</span> Overview</button>
+  <button data-view="industries"><span aria-hidden="true">02</span> Industries & construction</button>
+  <button data-view="costs"><span aria-hidden="true">03</span> Costs & supply chains</button>
+  <button data-view="trade"><span aria-hidden="true">04</span> Trade & tariffs</button>
+  <button data-view="scenarios"><span aria-hidden="true">05</span> Business scenarios</button>
+  <button data-view="outlook"><span aria-hidden="true">06</span> Quarterly outlook</button>
+  <button data-view="sources"><span aria-hidden="true">07</span> Sources & definitions</button>
+ </nav>
+ <div class="sidefoot"><span>Official public data</span><p>Canada · United States<br>Mexico through trade</p><a href="downloads/canada-economic-monitor-python.zip" download>Download Python project ↗</a></div>
+</aside>
+<div class="workspace">
+ <header class="topbar"><span>Economic intelligence</span><div><span class="meta" id="snapshot-date"></span><button class="plain" id="download-all">Download data ↓</button></div></header>
+ <main id="main" tabindex="-1">
+  <div class="pagehead"><div><div class="eyebrow" id="view-kicker">Canada and the United States</div><h1 id="view-title">Economic overview</h1><p id="view-description"></p></div><div class="range" id="range-control"><label for="history">Chart history</label><select id="history"><option value="24">2 years</option><option value="60" selected>5 years</option><option value="all">Since 2019</option></select></div></div>
+  <div id="data-warning"></div>
+  <div id="content"></div>
+  <footer class="footer"><span>Sources: Statistics Canada, Bank of Canada, U.S. agencies via FRED and the New York Fed.</span><span id="footer-date"></span></footer>
+ </main>
+</div>
+<div id="tooltip" class="tooltip" role="status" hidden></div>
+<div id="toast" class="toast" role="status" hidden></div>
+<script id="economic-data" type="application/json">__DATA__</script>
+<script src="app.js"></script>
+</body></html>

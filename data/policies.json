@@ -1,0 +1,37 @@
+{
+  "last_reviewed": "2026-09-14",
+  "notices": [
+    {
+      "id": "canada-2026-09-08",
+      "title": "Canadian counter-tariffs on selected U.S. goods",
+      "announced": "2026-08-25",
+      "effective": "2026-09-08",
+      "summary": "Canada announced product-specific rates of 15%, 25% and 50% on selected U.S.-origin imports, including goods in steel, dairy, appliances, agricultural equipment, pulp and paper, and electronics. The official list specifies the affected tariff classifications.",
+      "implication": "Check the classification and origin of imported inputs before updating landed-cost budgets; do not apply one blanket rate to all U.S. purchases.",
+      "url": "https://www.canada.ca/en/department-finance/news/2026/08/list-of-products-from-the-united-states-subject-to-counter-tariffs-effective-september-8-2026.html"
+    },
+    {
+      "id": "us-scope-2026-09-15",
+      "title": "Changes to U.S. tariff product coverage",
+      "announced": "2026-09-08",
+      "effective": "2026-09-15",
+      "summary": "The United States announced additions and removals from the product coverage of its Section 338 measures on Canadian goods. Coverage depends on the relevant proclamation and its annex.",
+      "implication": "Review product-level U.S. customer exposure and shipment timing. Trade-agreement qualification alone does not establish exemption from all additional measures.",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/09/modifying-the-scope-of-products-of-canada-subject-to-the-additional-duties-imposed-to-offset-canadian-discrimination-against-the-united-states-with-respect-to-motor-vehicles/"
+    },
+    {
+      "id": "us-restrictions-2026-09-29",
+      "title": "Announced U.S. import restrictions on selected Canadian products",
+      "announced": "2026-09-08",
+      "effective": "2026-09-29",
+      "summary": "The White House announced import bans for selected Canadian products, including certain alcoholic beverages and dairy products, with an effective date of September 29. The product annexes control the precise scope.",
+      "implication": "For potentially affected products, validate market access, alternate customers and delivery commitments; a tariff-cost scenario does not represent an import prohibition.",
+      "url": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-responds-to-canadas-retaliation/"
+    }
+  ],
+  "hubs": [
+    {"title":"Finance Canada · current tariff response", "url":"https://www.canada.ca/en/department-finance/programs/international-trade-finance-policy/canadas-response-us-tariffs.html"},
+    {"title":"U.S. Customs · trade remedies", "url":"https://www.cbp.gov/trade/programs-administration/trade-remedies"},
+    {"title":"USTR · USMCA", "url":"https://ustr.gov/trade-agreements/free-trade-agreements/united-states-mexico-canada-agreement"}
+  ]
+}

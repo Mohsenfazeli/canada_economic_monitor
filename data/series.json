@@ -1,0 +1,1829 @@
+[
+  {
+    "id": "cpi_CA",
+    "pid": 18100004,
+    "coordinate": "2.2.0.0.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "All-items"
+    ],
+    "label": "Canada consumer price index",
+    "unit": "Index (2002=100)",
+    "group": "inflation",
+    "geo": "Canada",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "All-items; not seasonally adjusted. Inflation is the change from the same month one year earlier."
+  },
+  {
+    "id": "unemployment_CA",
+    "pid": 14100287,
+    "coordinate": "1.7.1.1.1.1.0.0.0.0",
+    "members": [
+      "Canada",
+      "Unemployment rate",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Canada unemployment rate",
+    "unit": "%",
+    "group": "labour",
+    "geo": "Canada",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+. Canadian and U.S. population definitions differ."
+  },
+  {
+    "id": "employment_CA",
+    "pid": 14100287,
+    "coordinate": "1.3.1.1.1.1.0.0.0.0",
+    "members": [
+      "Canada",
+      "Employment",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Canada employment",
+    "unit": "Million people",
+    "group": "labour",
+    "geo": "Canada",
+    "divisor": 1000000.0,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+."
+  },
+  {
+    "id": "permits_CA",
+    "pid": 34100292,
+    "coordinate": "1.1.1.1.2.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Value of permits",
+      "Seasonally adjusted, current"
+    ],
+    "label": "Canada building permits",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Permit intentions do not guarantee project starts."
+  },
+  {
+    "id": "investment_CA",
+    "pid": 34100293,
+    "coordinate": "1.1.1.3.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "Canada building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Includes price and activity changes."
+  },
+  {
+    "id": "cpi_NL",
+    "pid": 18100004,
+    "coordinate": "3.2.0.0.0.0.0.0.0.0",
+    "members": [
+      "Newfoundland and Labrador",
+      "All-items"
+    ],
+    "label": "Newfoundland and Labrador consumer price index",
+    "unit": "Index (2002=100)",
+    "group": "inflation",
+    "geo": "Newfoundland and Labrador",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "All-items; not seasonally adjusted. Inflation is the change from the same month one year earlier."
+  },
+  {
+    "id": "unemployment_NL",
+    "pid": 14100287,
+    "coordinate": "2.7.1.1.1.1.0.0.0.0",
+    "members": [
+      "Newfoundland and Labrador",
+      "Unemployment rate",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Newfoundland and Labrador unemployment rate",
+    "unit": "%",
+    "group": "labour",
+    "geo": "Newfoundland and Labrador",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+. Canadian and U.S. population definitions differ."
+  },
+  {
+    "id": "employment_NL",
+    "pid": 14100287,
+    "coordinate": "2.3.1.1.1.1.0.0.0.0",
+    "members": [
+      "Newfoundland and Labrador",
+      "Employment",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Newfoundland and Labrador employment",
+    "unit": "Million people",
+    "group": "labour",
+    "geo": "Newfoundland and Labrador",
+    "divisor": 1000000.0,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+."
+  },
+  {
+    "id": "permits_NL",
+    "pid": 34100292,
+    "coordinate": "2.1.1.1.2.0.0.0.0.0",
+    "members": [
+      "Newfoundland and Labrador",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Value of permits",
+      "Seasonally adjusted, current"
+    ],
+    "label": "Newfoundland and Labrador building permits",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Newfoundland and Labrador",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Permit intentions do not guarantee project starts."
+  },
+  {
+    "id": "investment_NL",
+    "pid": 34100293,
+    "coordinate": "2.1.1.3.0.0.0.0.0.0",
+    "members": [
+      "Newfoundland and Labrador",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "Newfoundland and Labrador building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Newfoundland and Labrador",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Includes price and activity changes."
+  },
+  {
+    "id": "cpi_PE",
+    "pid": 18100004,
+    "coordinate": "5.2.0.0.0.0.0.0.0.0",
+    "members": [
+      "Prince Edward Island",
+      "All-items"
+    ],
+    "label": "Prince Edward Island consumer price index",
+    "unit": "Index (2002=100)",
+    "group": "inflation",
+    "geo": "Prince Edward Island",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "All-items; not seasonally adjusted. Inflation is the change from the same month one year earlier."
+  },
+  {
+    "id": "unemployment_PE",
+    "pid": 14100287,
+    "coordinate": "3.7.1.1.1.1.0.0.0.0",
+    "members": [
+      "Prince Edward Island",
+      "Unemployment rate",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Prince Edward Island unemployment rate",
+    "unit": "%",
+    "group": "labour",
+    "geo": "Prince Edward Island",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+. Canadian and U.S. population definitions differ."
+  },
+  {
+    "id": "employment_PE",
+    "pid": 14100287,
+    "coordinate": "3.3.1.1.1.1.0.0.0.0",
+    "members": [
+      "Prince Edward Island",
+      "Employment",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Prince Edward Island employment",
+    "unit": "Million people",
+    "group": "labour",
+    "geo": "Prince Edward Island",
+    "divisor": 1000000.0,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+."
+  },
+  {
+    "id": "permits_PE",
+    "pid": 34100292,
+    "coordinate": "3.1.1.1.2.0.0.0.0.0",
+    "members": [
+      "Prince Edward Island",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Value of permits",
+      "Seasonally adjusted, current"
+    ],
+    "label": "Prince Edward Island building permits",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Prince Edward Island",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Permit intentions do not guarantee project starts."
+  },
+  {
+    "id": "investment_PE",
+    "pid": 34100293,
+    "coordinate": "3.1.1.3.0.0.0.0.0.0",
+    "members": [
+      "Prince Edward Island",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "Prince Edward Island building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Prince Edward Island",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Includes price and activity changes."
+  },
+  {
+    "id": "cpi_NS",
+    "pid": 18100004,
+    "coordinate": "7.2.0.0.0.0.0.0.0.0",
+    "members": [
+      "Nova Scotia",
+      "All-items"
+    ],
+    "label": "Nova Scotia consumer price index",
+    "unit": "Index (2002=100)",
+    "group": "inflation",
+    "geo": "Nova Scotia",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "All-items; not seasonally adjusted. Inflation is the change from the same month one year earlier."
+  },
+  {
+    "id": "unemployment_NS",
+    "pid": 14100287,
+    "coordinate": "4.7.1.1.1.1.0.0.0.0",
+    "members": [
+      "Nova Scotia",
+      "Unemployment rate",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Nova Scotia unemployment rate",
+    "unit": "%",
+    "group": "labour",
+    "geo": "Nova Scotia",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+. Canadian and U.S. population definitions differ."
+  },
+  {
+    "id": "employment_NS",
+    "pid": 14100287,
+    "coordinate": "4.3.1.1.1.1.0.0.0.0",
+    "members": [
+      "Nova Scotia",
+      "Employment",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Nova Scotia employment",
+    "unit": "Million people",
+    "group": "labour",
+    "geo": "Nova Scotia",
+    "divisor": 1000000.0,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+."
+  },
+  {
+    "id": "permits_NS",
+    "pid": 34100292,
+    "coordinate": "4.1.1.1.2.0.0.0.0.0",
+    "members": [
+      "Nova Scotia",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Value of permits",
+      "Seasonally adjusted, current"
+    ],
+    "label": "Nova Scotia building permits",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Nova Scotia",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Permit intentions do not guarantee project starts."
+  },
+  {
+    "id": "investment_NS",
+    "pid": 34100293,
+    "coordinate": "4.1.1.3.0.0.0.0.0.0",
+    "members": [
+      "Nova Scotia",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "Nova Scotia building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Nova Scotia",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Includes price and activity changes."
+  },
+  {
+    "id": "cpi_NB",
+    "pid": 18100004,
+    "coordinate": "9.2.0.0.0.0.0.0.0.0",
+    "members": [
+      "New Brunswick",
+      "All-items"
+    ],
+    "label": "New Brunswick consumer price index",
+    "unit": "Index (2002=100)",
+    "group": "inflation",
+    "geo": "New Brunswick",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "All-items; not seasonally adjusted. Inflation is the change from the same month one year earlier."
+  },
+  {
+    "id": "unemployment_NB",
+    "pid": 14100287,
+    "coordinate": "5.7.1.1.1.1.0.0.0.0",
+    "members": [
+      "New Brunswick",
+      "Unemployment rate",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "New Brunswick unemployment rate",
+    "unit": "%",
+    "group": "labour",
+    "geo": "New Brunswick",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+. Canadian and U.S. population definitions differ."
+  },
+  {
+    "id": "employment_NB",
+    "pid": 14100287,
+    "coordinate": "5.3.1.1.1.1.0.0.0.0",
+    "members": [
+      "New Brunswick",
+      "Employment",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "New Brunswick employment",
+    "unit": "Million people",
+    "group": "labour",
+    "geo": "New Brunswick",
+    "divisor": 1000000.0,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+."
+  },
+  {
+    "id": "permits_NB",
+    "pid": 34100292,
+    "coordinate": "5.1.1.1.2.0.0.0.0.0",
+    "members": [
+      "New Brunswick",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Value of permits",
+      "Seasonally adjusted, current"
+    ],
+    "label": "New Brunswick building permits",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "New Brunswick",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Permit intentions do not guarantee project starts."
+  },
+  {
+    "id": "investment_NB",
+    "pid": 34100293,
+    "coordinate": "5.1.1.3.0.0.0.0.0.0",
+    "members": [
+      "New Brunswick",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "New Brunswick building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "New Brunswick",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Includes price and activity changes."
+  },
+  {
+    "id": "cpi_QC",
+    "pid": 18100004,
+    "coordinate": "11.2.0.0.0.0.0.0.0.0",
+    "members": [
+      "Quebec",
+      "All-items"
+    ],
+    "label": "Quebec consumer price index",
+    "unit": "Index (2002=100)",
+    "group": "inflation",
+    "geo": "Quebec",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "All-items; not seasonally adjusted. Inflation is the change from the same month one year earlier."
+  },
+  {
+    "id": "unemployment_QC",
+    "pid": 14100287,
+    "coordinate": "6.7.1.1.1.1.0.0.0.0",
+    "members": [
+      "Quebec",
+      "Unemployment rate",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Quebec unemployment rate",
+    "unit": "%",
+    "group": "labour",
+    "geo": "Quebec",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+. Canadian and U.S. population definitions differ."
+  },
+  {
+    "id": "employment_QC",
+    "pid": 14100287,
+    "coordinate": "6.3.1.1.1.1.0.0.0.0",
+    "members": [
+      "Quebec",
+      "Employment",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Quebec employment",
+    "unit": "Million people",
+    "group": "labour",
+    "geo": "Quebec",
+    "divisor": 1000000.0,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+."
+  },
+  {
+    "id": "permits_QC",
+    "pid": 34100292,
+    "coordinate": "6.1.1.1.2.0.0.0.0.0",
+    "members": [
+      "Quebec",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Value of permits",
+      "Seasonally adjusted, current"
+    ],
+    "label": "Quebec building permits",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Quebec",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Permit intentions do not guarantee project starts."
+  },
+  {
+    "id": "investment_QC",
+    "pid": 34100293,
+    "coordinate": "6.1.1.3.0.0.0.0.0.0",
+    "members": [
+      "Quebec",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "Quebec building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Quebec",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Includes price and activity changes."
+  },
+  {
+    "id": "cpi_ON",
+    "pid": 18100004,
+    "coordinate": "14.2.0.0.0.0.0.0.0.0",
+    "members": [
+      "Ontario",
+      "All-items"
+    ],
+    "label": "Ontario consumer price index",
+    "unit": "Index (2002=100)",
+    "group": "inflation",
+    "geo": "Ontario",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "All-items; not seasonally adjusted. Inflation is the change from the same month one year earlier."
+  },
+  {
+    "id": "unemployment_ON",
+    "pid": 14100287,
+    "coordinate": "7.7.1.1.1.1.0.0.0.0",
+    "members": [
+      "Ontario",
+      "Unemployment rate",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Ontario unemployment rate",
+    "unit": "%",
+    "group": "labour",
+    "geo": "Ontario",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+. Canadian and U.S. population definitions differ."
+  },
+  {
+    "id": "employment_ON",
+    "pid": 14100287,
+    "coordinate": "7.3.1.1.1.1.0.0.0.0",
+    "members": [
+      "Ontario",
+      "Employment",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Ontario employment",
+    "unit": "Million people",
+    "group": "labour",
+    "geo": "Ontario",
+    "divisor": 1000000.0,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+."
+  },
+  {
+    "id": "permits_ON",
+    "pid": 34100292,
+    "coordinate": "7.1.1.1.2.0.0.0.0.0",
+    "members": [
+      "Ontario",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Value of permits",
+      "Seasonally adjusted, current"
+    ],
+    "label": "Ontario building permits",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Ontario",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Permit intentions do not guarantee project starts."
+  },
+  {
+    "id": "investment_ON",
+    "pid": 34100293,
+    "coordinate": "7.1.1.3.0.0.0.0.0.0",
+    "members": [
+      "Ontario",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "Ontario building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Ontario",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Includes price and activity changes."
+  },
+  {
+    "id": "cpi_MB",
+    "pid": 18100004,
+    "coordinate": "18.2.0.0.0.0.0.0.0.0",
+    "members": [
+      "Manitoba",
+      "All-items"
+    ],
+    "label": "Manitoba consumer price index",
+    "unit": "Index (2002=100)",
+    "group": "inflation",
+    "geo": "Manitoba",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "All-items; not seasonally adjusted. Inflation is the change from the same month one year earlier."
+  },
+  {
+    "id": "unemployment_MB",
+    "pid": 14100287,
+    "coordinate": "8.7.1.1.1.1.0.0.0.0",
+    "members": [
+      "Manitoba",
+      "Unemployment rate",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Manitoba unemployment rate",
+    "unit": "%",
+    "group": "labour",
+    "geo": "Manitoba",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+. Canadian and U.S. population definitions differ."
+  },
+  {
+    "id": "employment_MB",
+    "pid": 14100287,
+    "coordinate": "8.3.1.1.1.1.0.0.0.0",
+    "members": [
+      "Manitoba",
+      "Employment",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Manitoba employment",
+    "unit": "Million people",
+    "group": "labour",
+    "geo": "Manitoba",
+    "divisor": 1000000.0,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+."
+  },
+  {
+    "id": "permits_MB",
+    "pid": 34100292,
+    "coordinate": "8.1.1.1.2.0.0.0.0.0",
+    "members": [
+      "Manitoba",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Value of permits",
+      "Seasonally adjusted, current"
+    ],
+    "label": "Manitoba building permits",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Manitoba",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Permit intentions do not guarantee project starts."
+  },
+  {
+    "id": "investment_MB",
+    "pid": 34100293,
+    "coordinate": "8.1.1.3.0.0.0.0.0.0",
+    "members": [
+      "Manitoba",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "Manitoba building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Manitoba",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Includes price and activity changes."
+  },
+  {
+    "id": "cpi_SK",
+    "pid": 18100004,
+    "coordinate": "20.2.0.0.0.0.0.0.0.0",
+    "members": [
+      "Saskatchewan",
+      "All-items"
+    ],
+    "label": "Saskatchewan consumer price index",
+    "unit": "Index (2002=100)",
+    "group": "inflation",
+    "geo": "Saskatchewan",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "All-items; not seasonally adjusted. Inflation is the change from the same month one year earlier."
+  },
+  {
+    "id": "unemployment_SK",
+    "pid": 14100287,
+    "coordinate": "9.7.1.1.1.1.0.0.0.0",
+    "members": [
+      "Saskatchewan",
+      "Unemployment rate",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Saskatchewan unemployment rate",
+    "unit": "%",
+    "group": "labour",
+    "geo": "Saskatchewan",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+. Canadian and U.S. population definitions differ."
+  },
+  {
+    "id": "employment_SK",
+    "pid": 14100287,
+    "coordinate": "9.3.1.1.1.1.0.0.0.0",
+    "members": [
+      "Saskatchewan",
+      "Employment",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Saskatchewan employment",
+    "unit": "Million people",
+    "group": "labour",
+    "geo": "Saskatchewan",
+    "divisor": 1000000.0,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+."
+  },
+  {
+    "id": "permits_SK",
+    "pid": 34100292,
+    "coordinate": "9.1.1.1.2.0.0.0.0.0",
+    "members": [
+      "Saskatchewan",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Value of permits",
+      "Seasonally adjusted, current"
+    ],
+    "label": "Saskatchewan building permits",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Saskatchewan",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Permit intentions do not guarantee project starts."
+  },
+  {
+    "id": "investment_SK",
+    "pid": 34100293,
+    "coordinate": "9.1.1.3.0.0.0.0.0.0",
+    "members": [
+      "Saskatchewan",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "Saskatchewan building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Saskatchewan",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Includes price and activity changes."
+  },
+  {
+    "id": "cpi_AB",
+    "pid": 18100004,
+    "coordinate": "23.2.0.0.0.0.0.0.0.0",
+    "members": [
+      "Alberta",
+      "All-items"
+    ],
+    "label": "Alberta consumer price index",
+    "unit": "Index (2002=100)",
+    "group": "inflation",
+    "geo": "Alberta",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "All-items; not seasonally adjusted. Inflation is the change from the same month one year earlier."
+  },
+  {
+    "id": "unemployment_AB",
+    "pid": 14100287,
+    "coordinate": "10.7.1.1.1.1.0.0.0.0",
+    "members": [
+      "Alberta",
+      "Unemployment rate",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Alberta unemployment rate",
+    "unit": "%",
+    "group": "labour",
+    "geo": "Alberta",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+. Canadian and U.S. population definitions differ."
+  },
+  {
+    "id": "employment_AB",
+    "pid": 14100287,
+    "coordinate": "10.3.1.1.1.1.0.0.0.0",
+    "members": [
+      "Alberta",
+      "Employment",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "Alberta employment",
+    "unit": "Million people",
+    "group": "labour",
+    "geo": "Alberta",
+    "divisor": 1000000.0,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+."
+  },
+  {
+    "id": "permits_AB",
+    "pid": 34100292,
+    "coordinate": "10.1.1.1.2.0.0.0.0.0",
+    "members": [
+      "Alberta",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Value of permits",
+      "Seasonally adjusted, current"
+    ],
+    "label": "Alberta building permits",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Alberta",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Permit intentions do not guarantee project starts."
+  },
+  {
+    "id": "investment_AB",
+    "pid": 34100293,
+    "coordinate": "10.1.1.3.0.0.0.0.0.0",
+    "members": [
+      "Alberta",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "Alberta building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Alberta",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Includes price and activity changes."
+  },
+  {
+    "id": "cpi_BC",
+    "pid": 18100004,
+    "coordinate": "26.2.0.0.0.0.0.0.0.0",
+    "members": [
+      "British Columbia",
+      "All-items"
+    ],
+    "label": "British Columbia consumer price index",
+    "unit": "Index (2002=100)",
+    "group": "inflation",
+    "geo": "British Columbia",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "All-items; not seasonally adjusted. Inflation is the change from the same month one year earlier."
+  },
+  {
+    "id": "unemployment_BC",
+    "pid": 14100287,
+    "coordinate": "11.7.1.1.1.1.0.0.0.0",
+    "members": [
+      "British Columbia",
+      "Unemployment rate",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "British Columbia unemployment rate",
+    "unit": "%",
+    "group": "labour",
+    "geo": "British Columbia",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+. Canadian and U.S. population definitions differ."
+  },
+  {
+    "id": "employment_BC",
+    "pid": 14100287,
+    "coordinate": "11.3.1.1.1.1.0.0.0.0",
+    "members": [
+      "British Columbia",
+      "Employment",
+      "Total - Gender",
+      "15 years and over",
+      "Estimate",
+      "Seasonally adjusted"
+    ],
+    "label": "British Columbia employment",
+    "unit": "Million people",
+    "group": "labour",
+    "geo": "British Columbia",
+    "divisor": 1000000.0,
+    "frequency": "monthly",
+    "note": "Seasonally adjusted; total gender, age 15+."
+  },
+  {
+    "id": "permits_BC",
+    "pid": 34100292,
+    "coordinate": "11.1.1.1.2.0.0.0.0.0",
+    "members": [
+      "British Columbia",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Value of permits",
+      "Seasonally adjusted, current"
+    ],
+    "label": "British Columbia building permits",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "British Columbia",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Permit intentions do not guarantee project starts."
+  },
+  {
+    "id": "investment_BC",
+    "pid": 34100293,
+    "coordinate": "11.1.1.3.0.0.0.0.0.0",
+    "members": [
+      "British Columbia",
+      "Total residential and non-residential",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "British Columbia building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "British Columbia",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Total residential and non-residential; current dollars, seasonally adjusted. Includes price and activity changes."
+  },
+  {
+    "id": "industry_all",
+    "pid": 36100434,
+    "coordinate": "1.1.1.1.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Seasonally adjusted at annual rates",
+      "Chained (2017) dollars",
+      "All industries"
+    ],
+    "label": "All industries",
+    "unit": "CAD bn (2017)",
+    "group": "industry",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Real GDP at basic prices; chained 2017 CAD, seasonally adjusted annual rate. Chained industry values are not additive."
+  },
+  {
+    "id": "industry_construction",
+    "pid": 36100434,
+    "coordinate": "1.1.1.49.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Seasonally adjusted at annual rates",
+      "Chained (2017) dollars",
+      "Construction"
+    ],
+    "label": "Construction",
+    "unit": "CAD bn (2017)",
+    "group": "industry",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Real GDP at basic prices; chained 2017 CAD, seasonally adjusted annual rate. Chained industry values are not additive."
+  },
+  {
+    "id": "industry_manufacturing",
+    "pid": 36100434,
+    "coordinate": "1.1.1.54.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Seasonally adjusted at annual rates",
+      "Chained (2017) dollars",
+      "Manufacturing"
+    ],
+    "label": "Manufacturing",
+    "unit": "CAD bn (2017)",
+    "group": "industry",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Real GDP at basic prices; chained 2017 CAD, seasonally adjusted annual rate. Chained industry values are not additive."
+  },
+  {
+    "id": "industry_mining",
+    "pid": 36100434,
+    "coordinate": "1.1.1.27.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Seasonally adjusted at annual rates",
+      "Chained (2017) dollars",
+      "Mining, quarrying, and oil and gas extraction"
+    ],
+    "label": "Mining, quarrying, and oil and gas extraction",
+    "unit": "CAD bn (2017)",
+    "group": "industry",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Real GDP at basic prices; chained 2017 CAD, seasonally adjusted annual rate. Chained industry values are not additive."
+  },
+  {
+    "id": "industry_utilities",
+    "pid": 36100434,
+    "coordinate": "1.1.1.45.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Seasonally adjusted at annual rates",
+      "Chained (2017) dollars",
+      "Utilities"
+    ],
+    "label": "Utilities",
+    "unit": "CAD bn (2017)",
+    "group": "industry",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Real GDP at basic prices; chained 2017 CAD, seasonally adjusted annual rate. Chained industry values are not additive."
+  },
+  {
+    "id": "industry_wholesale",
+    "pid": 36100434,
+    "coordinate": "1.1.1.149.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Seasonally adjusted at annual rates",
+      "Chained (2017) dollars",
+      "Wholesale trade"
+    ],
+    "label": "Wholesale trade",
+    "unit": "CAD bn (2017)",
+    "group": "industry",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Real GDP at basic prices; chained 2017 CAD, seasonally adjusted annual rate. Chained industry values are not additive."
+  },
+  {
+    "id": "industry_retail",
+    "pid": 36100434,
+    "coordinate": "1.1.1.159.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Seasonally adjusted at annual rates",
+      "Chained (2017) dollars",
+      "Retail trade"
+    ],
+    "label": "Retail trade",
+    "unit": "CAD bn (2017)",
+    "group": "industry",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Real GDP at basic prices; chained 2017 CAD, seasonally adjusted annual rate. Chained industry values are not additive."
+  },
+  {
+    "id": "industry_transport",
+    "pid": 36100434,
+    "coordinate": "1.1.1.172.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Seasonally adjusted at annual rates",
+      "Chained (2017) dollars",
+      "Transportation and warehousing"
+    ],
+    "label": "Transportation and warehousing",
+    "unit": "CAD bn (2017)",
+    "group": "industry",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Real GDP at basic prices; chained 2017 CAD, seasonally adjusted annual rate. Chained industry values are not additive."
+  },
+  {
+    "id": "industry_finance",
+    "pid": 36100434,
+    "coordinate": "1.1.1.198.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Seasonally adjusted at annual rates",
+      "Chained (2017) dollars",
+      "Finance and insurance"
+    ],
+    "label": "Finance and insurance",
+    "unit": "CAD bn (2017)",
+    "group": "industry",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Real GDP at basic prices; chained 2017 CAD, seasonally adjusted annual rate. Chained industry values are not additive."
+  },
+  {
+    "id": "industry_real_estate",
+    "pid": 36100434,
+    "coordinate": "1.1.1.210.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Seasonally adjusted at annual rates",
+      "Chained (2017) dollars",
+      "Real estate and rental and leasing"
+    ],
+    "label": "Real estate and rental and leasing",
+    "unit": "CAD bn (2017)",
+    "group": "industry",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Real GDP at basic prices; chained 2017 CAD, seasonally adjusted annual rate. Chained industry values are not additive."
+  },
+  {
+    "id": "industry_professional",
+    "pid": 36100434,
+    "coordinate": "1.1.1.220.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Seasonally adjusted at annual rates",
+      "Chained (2017) dollars",
+      "Professional, scientific and technical services"
+    ],
+    "label": "Professional, scientific and technical services",
+    "unit": "CAD bn (2017)",
+    "group": "industry",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Real GDP at basic prices; chained 2017 CAD, seasonally adjusted annual rate. Chained industry values are not additive."
+  },
+  {
+    "id": "ca_gdp",
+    "pid": 36100104,
+    "coordinate": "1.1.1.30.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Chained (2017) dollars",
+      "Seasonally adjusted at annual rates",
+      "Gross domestic product at market prices"
+    ],
+    "label": "Gross domestic product at market prices",
+    "unit": "CAD bn (2017)",
+    "group": "gdp",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "quarterly",
+    "note": "Chained 2017 CAD, seasonally adjusted annual rate. Annualized quarterly growth = ((GDP / previous-quarter GDP)^4 − 1) × 100."
+  },
+  {
+    "id": "ca_business_capex",
+    "pid": 36100104,
+    "coordinate": "1.1.1.11.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Chained (2017) dollars",
+      "Seasonally adjusted at annual rates",
+      "Business gross fixed capital formation"
+    ],
+    "label": "Business gross fixed capital formation",
+    "unit": "CAD bn (2017)",
+    "group": "gdp",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "quarterly",
+    "note": "Chained 2017 CAD, seasonally adjusted annual rate. Annualized quarterly growth = ((GDP / previous-quarter GDP)^4 − 1) × 100."
+  },
+  {
+    "id": "ca_machinery",
+    "pid": 36100104,
+    "coordinate": "1.1.1.15.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Chained (2017) dollars",
+      "Seasonally adjusted at annual rates",
+      "Machinery and equipment"
+    ],
+    "label": "Machinery and equipment",
+    "unit": "CAD bn (2017)",
+    "group": "gdp",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "quarterly",
+    "note": "Chained 2017 CAD, seasonally adjusted annual rate. Annualized quarterly growth = ((GDP / previous-quarter GDP)^4 − 1) × 100."
+  },
+  {
+    "id": "ca_residential",
+    "pid": 36100104,
+    "coordinate": "1.1.1.12.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Chained (2017) dollars",
+      "Seasonally adjusted at annual rates",
+      "Residential structures"
+    ],
+    "label": "Residential structures",
+    "unit": "CAD bn (2017)",
+    "group": "gdp",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "quarterly",
+    "note": "Chained 2017 CAD, seasonally adjusted annual rate. Annualized quarterly growth = ((GDP / previous-quarter GDP)^4 − 1) × 100."
+  },
+  {
+    "id": "ippi",
+    "pid": 18100265,
+    "coordinate": "1.1.0.0.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Total, Industrial product price index (IPPI)"
+    ],
+    "label": "Industrial product prices",
+    "unit": "Index (Jan 2020=100)",
+    "group": "costs",
+    "geo": "Canada",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Factory-gate selling prices of Canadian producers; not delivered purchaser prices and not a measure of total construction costs."
+  },
+  {
+    "id": "lumber",
+    "pid": 18100265,
+    "coordinate": "1.12.0.0.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Lumber and other wood products"
+    ],
+    "label": "Lumber and wood products",
+    "unit": "Index (Jan 2020=100)",
+    "group": "costs",
+    "geo": "Canada",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Factory-gate selling prices of Canadian producers; not delivered purchaser prices and not a measure of total construction costs."
+  },
+  {
+    "id": "energy",
+    "pid": 18100265,
+    "coordinate": "1.14.0.0.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Energy and petroleum products"
+    ],
+    "label": "Energy and petroleum",
+    "unit": "Index (Jan 2020=100)",
+    "group": "costs",
+    "geo": "Canada",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Factory-gate selling prices of Canadian producers; not delivered purchaser prices and not a measure of total construction costs."
+  },
+  {
+    "id": "ferrous",
+    "pid": 18100265,
+    "coordinate": "1.15.0.0.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Primary ferrous metal products"
+    ],
+    "label": "Primary ferrous metals",
+    "unit": "Index (Jan 2020=100)",
+    "group": "costs",
+    "geo": "Canada",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Factory-gate selling prices of Canadian producers; not delivered purchaser prices and not a measure of total construction costs."
+  },
+  {
+    "id": "nonferrous",
+    "pid": 18100265,
+    "coordinate": "1.16.0.0.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Primary non-ferrous metal products"
+    ],
+    "label": "Primary non-ferrous metals",
+    "unit": "Index (Jan 2020=100)",
+    "group": "costs",
+    "geo": "Canada",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Factory-gate selling prices of Canadian producers; not delivered purchaser prices and not a measure of total construction costs."
+  },
+  {
+    "id": "fabricated",
+    "pid": 18100265,
+    "coordinate": "1.17.0.0.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Fabricated metal products and construction materials"
+    ],
+    "label": "Fabricated metals and construction materials",
+    "unit": "Index (Jan 2020=100)",
+    "group": "costs",
+    "geo": "Canada",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Factory-gate selling prices of Canadian producers; not delivered purchaser prices and not a measure of total construction costs."
+  },
+  {
+    "id": "machinery",
+    "pid": 18100265,
+    "coordinate": "1.19.0.0.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Machinery and equipment"
+    ],
+    "label": "Machinery and equipment",
+    "unit": "Index (Jan 2020=100)",
+    "group": "costs",
+    "geo": "Canada",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Factory-gate selling prices of Canadian producers; not delivered purchaser prices and not a measure of total construction costs."
+  },
+  {
+    "id": "cement",
+    "pid": 18100265,
+    "coordinate": "1.22.0.0.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Cement, glass, and other non-metallic mineral products"
+    ],
+    "label": "Cement, glass and mineral products",
+    "unit": "Index (Jan 2020=100)",
+    "group": "costs",
+    "geo": "Canada",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Factory-gate selling prices of Canadian producers; not delivered purchaser prices and not a measure of total construction costs."
+  },
+  {
+    "id": "rmpi",
+    "pid": 18100268,
+    "coordinate": "1.1.0.0.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Total, Raw materials price indexes (RMPI)"
+    ],
+    "label": "Raw material prices",
+    "unit": "Index (Jan 2020=100)",
+    "group": "costs",
+    "geo": "Canada",
+    "divisor": 1,
+    "frequency": "monthly",
+    "note": "Prices paid by Canadian manufacturers for key raw materials; not seasonally adjusted."
+  },
+  {
+    "id": "building_price_residential",
+    "pid": 18100289,
+    "coordinate": "1.1.1.0.0.0.0.0.0.0",
+    "members": [
+      "Fifteen census metropolitan area composite",
+      "Residential buildings",
+      "Division composite"
+    ],
+    "label": "Residential building costs",
+    "unit": "Index (2023=100)",
+    "group": "costs",
+    "geo": "15-CMA composite",
+    "divisor": 1,
+    "frequency": "quarterly",
+    "note": "Fifteen-CMA composite, not all of Canada. Building construction price index; not seasonally adjusted."
+  },
+  {
+    "id": "building_price_nonresidential",
+    "pid": 18100289,
+    "coordinate": "1.7.1.0.0.0.0.0.0.0",
+    "members": [
+      "Fifteen census metropolitan area composite",
+      "Non-residential buildings",
+      "Division composite"
+    ],
+    "label": "Nonresidential building costs",
+    "unit": "Index (2023=100)",
+    "group": "costs",
+    "geo": "15-CMA composite",
+    "divisor": 1,
+    "frequency": "quarterly",
+    "note": "Fifteen-CMA composite, not all of Canada. Building construction price index; not seasonally adjusted."
+  },
+  {
+    "id": "imports_World",
+    "pid": 12100011,
+    "coordinate": "1.1.2.2.1.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Import",
+      "Balance of payments",
+      "Seasonally adjusted",
+      "All countries"
+    ],
+    "label": "World imports",
+    "unit": "CAD bn",
+    "group": "trade",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Merchandise trade; balance-of-payments basis, current CAD, seasonally adjusted. Excludes services. EU aggregate overlaps individual EU countries; no overlapping categories are summed."
+  },
+  {
+    "id": "exports_World",
+    "pid": 12100011,
+    "coordinate": "1.2.2.2.1.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Export",
+      "Balance of payments",
+      "Seasonally adjusted",
+      "All countries"
+    ],
+    "label": "World exports",
+    "unit": "CAD bn",
+    "group": "trade",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Merchandise trade; balance-of-payments basis, current CAD, seasonally adjusted. Excludes services. EU aggregate overlaps individual EU countries; no overlapping categories are summed."
+  },
+  {
+    "id": "imports_US",
+    "pid": 12100011,
+    "coordinate": "1.1.2.2.2.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Import",
+      "Balance of payments",
+      "Seasonally adjusted",
+      "United States"
+    ],
+    "label": "US imports",
+    "unit": "CAD bn",
+    "group": "trade",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Merchandise trade; balance-of-payments basis, current CAD, seasonally adjusted. Excludes services. EU aggregate overlaps individual EU countries; no overlapping categories are summed."
+  },
+  {
+    "id": "exports_US",
+    "pid": 12100011,
+    "coordinate": "1.2.2.2.2.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Export",
+      "Balance of payments",
+      "Seasonally adjusted",
+      "United States"
+    ],
+    "label": "US exports",
+    "unit": "CAD bn",
+    "group": "trade",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Merchandise trade; balance-of-payments basis, current CAD, seasonally adjusted. Excludes services. EU aggregate overlaps individual EU countries; no overlapping categories are summed."
+  },
+  {
+    "id": "imports_EU",
+    "pid": 12100011,
+    "coordinate": "1.1.2.2.3.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Import",
+      "Balance of payments",
+      "Seasonally adjusted",
+      "European Union"
+    ],
+    "label": "EU imports",
+    "unit": "CAD bn",
+    "group": "trade",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Merchandise trade; balance-of-payments basis, current CAD, seasonally adjusted. Excludes services. EU aggregate overlaps individual EU countries; no overlapping categories are summed."
+  },
+  {
+    "id": "exports_EU",
+    "pid": 12100011,
+    "coordinate": "1.2.2.2.3.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Export",
+      "Balance of payments",
+      "Seasonally adjusted",
+      "European Union"
+    ],
+    "label": "EU exports",
+    "unit": "CAD bn",
+    "group": "trade",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Merchandise trade; balance-of-payments basis, current CAD, seasonally adjusted. Excludes services. EU aggregate overlaps individual EU countries; no overlapping categories are summed."
+  },
+  {
+    "id": "imports_UK",
+    "pid": 12100011,
+    "coordinate": "1.1.2.2.4.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Import",
+      "Balance of payments",
+      "Seasonally adjusted",
+      "United Kingdom"
+    ],
+    "label": "UK imports",
+    "unit": "CAD bn",
+    "group": "trade",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Merchandise trade; balance-of-payments basis, current CAD, seasonally adjusted. Excludes services. EU aggregate overlaps individual EU countries; no overlapping categories are summed."
+  },
+  {
+    "id": "exports_UK",
+    "pid": 12100011,
+    "coordinate": "1.2.2.2.4.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Export",
+      "Balance of payments",
+      "Seasonally adjusted",
+      "United Kingdom"
+    ],
+    "label": "UK exports",
+    "unit": "CAD bn",
+    "group": "trade",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Merchandise trade; balance-of-payments basis, current CAD, seasonally adjusted. Excludes services. EU aggregate overlaps individual EU countries; no overlapping categories are summed."
+  },
+  {
+    "id": "imports_China",
+    "pid": 12100011,
+    "coordinate": "1.1.2.2.11.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Import",
+      "Balance of payments",
+      "Seasonally adjusted",
+      "China"
+    ],
+    "label": "China imports",
+    "unit": "CAD bn",
+    "group": "trade",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Merchandise trade; balance-of-payments basis, current CAD, seasonally adjusted. Excludes services. EU aggregate overlaps individual EU countries; no overlapping categories are summed."
+  },
+  {
+    "id": "exports_China",
+    "pid": 12100011,
+    "coordinate": "1.2.2.2.11.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Export",
+      "Balance of payments",
+      "Seasonally adjusted",
+      "China"
+    ],
+    "label": "China exports",
+    "unit": "CAD bn",
+    "group": "trade",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Merchandise trade; balance-of-payments basis, current CAD, seasonally adjusted. Excludes services. EU aggregate overlaps individual EU countries; no overlapping categories are summed."
+  },
+  {
+    "id": "imports_Mexico",
+    "pid": 12100011,
+    "coordinate": "1.1.2.2.12.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Import",
+      "Balance of payments",
+      "Seasonally adjusted",
+      "Mexico"
+    ],
+    "label": "Mexico imports",
+    "unit": "CAD bn",
+    "group": "trade",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Merchandise trade; balance-of-payments basis, current CAD, seasonally adjusted. Excludes services. EU aggregate overlaps individual EU countries; no overlapping categories are summed."
+  },
+  {
+    "id": "exports_Mexico",
+    "pid": 12100011,
+    "coordinate": "1.2.2.2.12.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Export",
+      "Balance of payments",
+      "Seasonally adjusted",
+      "Mexico"
+    ],
+    "label": "Mexico exports",
+    "unit": "CAD bn",
+    "group": "trade",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Merchandise trade; balance-of-payments basis, current CAD, seasonally adjusted. Excludes services. EU aggregate overlaps individual EU countries; no overlapping categories are summed."
+  },
+  {
+    "id": "imports_Japan",
+    "pid": 12100011,
+    "coordinate": "1.1.2.2.13.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Import",
+      "Balance of payments",
+      "Seasonally adjusted",
+      "Japan"
+    ],
+    "label": "Japan imports",
+    "unit": "CAD bn",
+    "group": "trade",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Merchandise trade; balance-of-payments basis, current CAD, seasonally adjusted. Excludes services. EU aggregate overlaps individual EU countries; no overlapping categories are summed."
+  },
+  {
+    "id": "exports_Japan",
+    "pid": 12100011,
+    "coordinate": "1.2.2.2.13.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Export",
+      "Balance of payments",
+      "Seasonally adjusted",
+      "Japan"
+    ],
+    "label": "Japan exports",
+    "unit": "CAD bn",
+    "group": "trade",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Merchandise trade; balance-of-payments basis, current CAD, seasonally adjusted. Excludes services. EU aggregate overlaps individual EU countries; no overlapping categories are summed."
+  },
+  {
+    "id": "building_residential",
+    "pid": 34100293,
+    "coordinate": "1.2.1.3.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Total residential",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "Residential building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Current CAD; seasonally adjusted. Nominal investment combines price and volume changes."
+  },
+  {
+    "id": "building_nonresidential",
+    "pid": 34100293,
+    "coordinate": "1.13.1.3.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Total non-residential",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "Nonresidential building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Current CAD; seasonally adjusted. Nominal investment combines price and volume changes."
+  },
+  {
+    "id": "building_industrial",
+    "pid": 34100293,
+    "coordinate": "1.14.1.3.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Total industrial",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "Industrial building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Current CAD; seasonally adjusted. Nominal investment combines price and volume changes."
+  },
+  {
+    "id": "building_commercial",
+    "pid": 34100293,
+    "coordinate": "1.19.1.3.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Total commercial",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "Commercial building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Current CAD; seasonally adjusted. Nominal investment combines price and volume changes."
+  },
+  {
+    "id": "building_institutional",
+    "pid": 34100293,
+    "coordinate": "1.28.1.3.0.0.0.0.0.0",
+    "members": [
+      "Canada",
+      "Total institutional and governmental",
+      "Types of work, total",
+      "Seasonally adjusted - current"
+    ],
+    "label": "Institutional building investment",
+    "unit": "CAD bn",
+    "group": "construction",
+    "geo": "Canada",
+    "divisor": 1000000000.0,
+    "frequency": "monthly",
+    "note": "Current CAD; seasonally adjusted. Nominal investment combines price and volume changes."
+  }
+]
