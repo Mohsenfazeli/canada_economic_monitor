@@ -13,26 +13,37 @@ from .metrics import enrich
 
 WDS = 'https://www150.statcan.gc.ca/t1/wds/rest/'
 START = '2019-01-01'
+# StatCan locks cubes overnight (midnight–08:30 Eastern) and answers with HTTP 409.
+# Empty 200 bodies also show up under load; both are transient and worth retrying.
+RETRY_STATUS = (409, 429, 500, 502, 503, 504)
 
 
 def now():
     return datetime.now(timezone.utc).isoformat(timespec='seconds')
 
 
-def request(url, payload=None, timeout=45):
+def request(url, payload=None, timeout=45, attempts=5):
     body = json.dumps(payload).encode() if payload is not None else None
-    for attempt in range(3):
+    last_error = None
+    for attempt in range(attempts):
         req = urllib.request.Request(url, data=body, headers={'User-Agent': 'CanadaEconomicMonitor/1.0 (public statistical research)', 'Accept': '*/*', 'Content-Type': 'application/json'})
         try:
             with urllib.request.urlopen(req, timeout=timeout) as response:
-                return response.read()
+                raw = response.read()
+            if not raw or not raw.strip():
+                raise ValueError(f'Empty response from {url}')
+            return raw
         except urllib.error.HTTPError as exc:
-            if exc.code not in (409, 429, 500, 502, 503, 504) or attempt == 2:
+            last_error = exc
+            if exc.code not in RETRY_STATUS or attempt == attempts - 1:
                 raise
-        except (TimeoutError, urllib.error.URLError):
-            if attempt == 2:
+        except (TimeoutError, urllib.error.URLError, ValueError) as exc:
+            last_error = exc
+            if attempt == attempts - 1:
                 raise
-        time.sleep(1 + attempt)
+        # Back off harder for StatCan lock windows and rate limits.
+        time.sleep(min(30, (2 ** attempt) + attempt))
+    raise last_error  # pragma: no cover
 
 
 def number(value):
@@ -43,13 +54,27 @@ def number(value):
         return None
 
 
+def _load_json(raw, label):
+    text = raw.decode('utf-8-sig').strip()
+    if not text:
+        raise ValueError(f'Empty JSON from {label}')
+    return json.loads(text)
+
+
 def statcan(config):
     pids = sorted({s['pid'] for s in config})
-    meta_args = [{'productId': n} for n in pids]
-    metadata = json.loads(request(WDS + 'getCubeMetadata', meta_args))
-    metas = {int(m['object']['productId']): m['object'] for m in metadata if m.get('status') == 'SUCCESS'}
+    # Metadata payloads are large; fetch a few cubes at a time to avoid empty/truncated answers.
+    metas = {}
+    for offset in range(0, len(pids), 5):
+        batch = pids[offset:offset + 5]
+        meta_args = [{'productId': n} for n in batch]
+        metadata = _load_json(request(WDS + 'getCubeMetadata', meta_args, timeout=90), 'Statistics Canada metadata')
+        for m in metadata:
+            if m.get('status') == 'SUCCESS':
+                metas[int(m['object']['productId'])] = m['object']
     if len(metas) != len(pids):
-        raise ValueError('Statistics Canada metadata request was incomplete.')
+        missing = sorted(set(pids) - set(metas))
+        raise ValueError('Statistics Canada metadata request was incomplete: ' + ','.join(map(str, missing)))
     for s in config:
         meta = metas[s['pid']]
         actual = []
@@ -64,7 +89,7 @@ def statcan(config):
     for offset in range(0, len(config), 25):
         specs = config[offset:offset+25]
         args = [{'productId': s['pid'], 'coordinate': s['coordinate'], 'latestN': 120} for s in specs]
-        records = json.loads(request(WDS + 'getDataFromCubePidCoordAndLatestNPeriods', args))
+        records = _load_json(request(WDS + 'getDataFromCubePidCoordAndLatestNPeriods', args, timeout=90), 'Statistics Canada data')
         returned = {(int(r['object']['productId']), r['object']['coordinate']): r['object']
                     for r in records if r.get('status') == 'SUCCESS' and 'object' in r}
         for spec in specs:
@@ -103,7 +128,7 @@ def statcan(config):
 
 def bank_of_canada():
     url = 'https://www.bankofcanada.ca/valet/observations/FXUSDCAD,V39079/json?start_date=' + START
-    raw = json.loads(request(url))
+    raw = _load_json(request(url), 'Bank of Canada')
     result = {}
     for key, sid, label, unit in [('FXUSDCAD', 'fx', 'Canadian dollars per U.S. dollar', 'CAD / USD'), ('V39079', 'ca_rate', 'Bank of Canada policy rate', '%')]:
         daily = [{'date': p['d'], 'value': number(p[key]['v'])} for p in raw['observations'] if key in p]
@@ -123,38 +148,75 @@ def bank_of_canada():
     return result
 
 
-def fred():
-    specs = [('CPIAUCNS', 'us_cpi', 'U.S. consumer price index', 'Index (1982–84=100)', 'monthly', 'U.S. Bureau of Labor Statistics', 1, 'Not seasonally adjusted. Urban consumers.'),
-             ('UNRATE', 'us_unemployment', 'U.S. unemployment rate', '%', 'monthly', 'U.S. Bureau of Labor Statistics', 1, 'Seasonally adjusted; civilian noninstitutional population age 16+.'),
-             ('GDPC1', 'us_gdp', 'U.S. real GDP', 'USD bn (2017)', 'quarterly', 'U.S. Bureau of Economic Analysis', 1, 'Chained 2017 USD; seasonally adjusted annual rate.'),
-             ('FEDFUNDS', 'us_rate', 'U.S. effective federal funds rate', '%', 'monthly', 'Board of Governors of the Federal Reserve System', 1, 'Monthly average effective rate; not the target range.'),
-             ('INDPRO', 'us_industrial', 'U.S. industrial production', 'Index (2017=100)', 'monthly', 'Board of Governors of the Federal Reserve System', 1, 'Seasonally adjusted. Manufacturing, mining and utilities.'),
-             ('HOUST', 'us_housing', 'U.S. housing starts', 'Million units SAAR', 'monthly', 'U.S. Census Bureau / HUD', 1000, 'Housing units started; seasonally adjusted annual rate. Not comparable to permit values.')]
-    url = 'https://fred.stlouisfed.org/graph/fredgraph.csv?id=' + ','.join(s[0] for s in specs) + '&cosd=' + START
-    raw = request(url)
+FRED_SPECS = [
+    ('CPIAUCNS', 'us_cpi', 'U.S. consumer price index', 'Index (1982–84=100)', 'monthly', 'U.S. Bureau of Labor Statistics', 1, 'Not seasonally adjusted. Urban consumers.'),
+    ('UNRATE', 'us_unemployment', 'U.S. unemployment rate', '%', 'monthly', 'U.S. Bureau of Labor Statistics', 1, 'Seasonally adjusted; civilian noninstitutional population age 16+.'),
+    ('GDPC1', 'us_gdp', 'U.S. real GDP', 'USD bn (2017)', 'quarterly', 'U.S. Bureau of Economic Analysis', 1, 'Chained 2017 USD; seasonally adjusted annual rate.'),
+    ('FEDFUNDS', 'us_rate', 'U.S. effective federal funds rate', '%', 'monthly', 'Board of Governors of the Federal Reserve System', 1, 'Monthly average effective rate; not the target range.'),
+    ('INDPRO', 'us_industrial', 'U.S. industrial production', 'Index (2017=100)', 'monthly', 'Board of Governors of the Federal Reserve System', 1, 'Seasonally adjusted. Manufacturing, mining and utilities.'),
+    ('HOUST', 'us_housing', 'U.S. housing starts', 'Million units SAAR', 'monthly', 'U.S. Census Bureau / HUD', 1000, 'Housing units started; seasonally adjusted annual rate. Not comparable to permit values.'),
+]
+
+
+def _fred_tables(raw):
     if raw.startswith(b'PK'):
-        z = zipfile.ZipFile(io.BytesIO(raw))
-        tables = [list(csv.DictReader(io.StringIO(z.read(n).decode('utf-8-sig')))) for n in z.namelist() if n.endswith('.csv')]
-    else:
-        tables = [list(csv.DictReader(io.StringIO(raw.decode('utf-8-sig'))))]
+        with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+            return [list(csv.DictReader(io.StringIO(archive.read(name).decode('utf-8-sig'))))
+                    for name in archive.namelist() if name.lower().endswith('.csv')]
+    text = raw.decode('utf-8-sig').lstrip()
+    if not text or text[:1] in '<{':
+        raise ValueError('FRED returned a non-CSV response')
+    return [list(csv.DictReader(io.StringIO(text)))]
+
+
+def _fred_rows(tables, key, divisor):
+    rows = []
+    today = datetime.now(timezone.utc).date().isoformat()
+    for table in tables:
+        if not table or key not in table[0]:
+            continue
+        for point in table:
+            period = point.get('observation_date') or point.get('DATE') or ''
+            if START <= period <= today:
+                value = number(point[key])
+                if value is not None:
+                    rows.append({'date': period, 'value': value / divisor})
+    return rows
+
+
+def _fred_series(key, sid, label, unit, freq, provider, divisor, note, tables, request_url):
+    rows = _fred_rows(tables, key, divisor)
+    if not rows:
+        raise ValueError('No FRED observations for ' + key)
+    series = dict(id=sid, label=label, geo='United States', group='us', unit=unit, frequency=freq,
+                  provider=provider + ' via FRED', source_title=label, source_url='https://fred.stlouisfed.org/series/' + key,
+                  fetched_at=now(), fetch_status='success', note=note, request={'url': request_url, 'method': 'GET'},
+                  observations=sorted(rows, key=lambda r: r['date']))
+    return enrich(series)
+
+
+def fred():
+    """Prefer one multi-series FRED graph download; fall back per series if any are missing."""
+    ids = ','.join(spec[0] for spec in FRED_SPECS)
+    bulk_url = 'https://fred.stlouisfed.org/graph/fredgraph.csv?id=' + ids + '&cosd=' + START
+    tables = []
+    try:
+        tables = _fred_tables(request(bulk_url))
+    except Exception:
+        tables = []
     result = {}
-    for key, sid, label, unit, freq, provider, divisor, note in specs:
-        rows = []
-        for table in tables:
-            if table and key in table[0]:
-                for point in table:
-                    period = point.get('observation_date', point.get('DATE', ''))
-                    if START <= period <= datetime.now(timezone.utc).date().isoformat():
-                        v = number(point[key])
-                        if v is not None:
-                            rows.append({'date': period, 'value': v / divisor})
-        if not rows:
-            raise ValueError('No FRED observations for ' + key)
-        s = dict(id=sid, label=label, geo='United States', group='us', unit=unit, frequency=freq,
-                 provider=provider + ' via FRED', source_title=label, source_url='https://fred.stlouisfed.org/series/' + key,
-                 fetched_at=now(), fetch_status='success', note=note, request={'url': url, 'method': 'GET'},
-                 observations=sorted(rows, key=lambda r:r['date']))
-        result[sid] = enrich(s)
+    missing = []
+    for spec in FRED_SPECS:
+        key = spec[0]
+        try:
+            result[spec[1]] = _fred_series(*spec, tables, bulk_url)
+        except ValueError:
+            missing.append(spec)
+    for spec in missing:
+        key = spec[0]
+        single_url = 'https://fred.stlouisfed.org/graph/fredgraph.csv?id=' + key + '&cosd=' + START
+        single_tables = _fred_tables(request(single_url))
+        result[spec[1]] = _fred_series(*spec, single_tables, single_url)
     return result
 
 

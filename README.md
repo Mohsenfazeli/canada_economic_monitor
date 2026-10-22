@@ -24,15 +24,18 @@ dashboard sidebar on a deployed site.
 To fetch current data and rebuild:
 
 ```sh
-python app.py build --refresh --strict
+python app.py build --refresh
 ```
 
-`--strict` aborts before replacing the data snapshot or build if any statistical
-provider fails. Without it, failed providers retain their prior observations,
-original retrieval timestamps, and a visible cached-data warning. New or
-unresolvable series remain unavailable; no synthetic values are substituted.
-Requests have timeouts and bounded retries. Network access to the official
-source hosts is required for refresh. A browser reload does not fetch new data.
+Without `--strict`, a failed provider retains its prior observations, original
+retrieval timestamps, and a visible cached-data warning while the rest of the
+build continues. Use `--strict` to abort before replacing the snapshot or build
+if any provider fails. Either mode still fails when a provider leaves no usable
+series at all. New or unresolvable series remain unavailable; no synthetic
+values are substituted. Requests have timeouts and bounded retries (including
+Statistics Canada HTTP 409 lock windows and empty responses). Network access to
+the official source hosts is required for refresh. A browser reload does not
+fetch new data.
 
 ## Publish publicly
 
