@@ -68,15 +68,33 @@ def source_zip(destination):
                 archive.write(p,'canada-economic-monitor/'+str(p.relative_to(ROOT)))
 
 
+def _warn_provider_errors(errors):
+    if not errors:
+        return
+    print('WARNING: one or more providers failed; prior observations were kept where available:', file=sys.stderr)
+    for err in errors:
+        print(f"  - {err['provider']}: {err['message']} (at {err.get('attempted_at','unknown')})", file=sys.stderr)
+
+
 def build(refresh=False, strict=False):
     data=ROOT/'data';config=read_json(data/'series.json');snapshot=read_json(data/'snapshot.json',{})
     policy=read_json(data/'policies.json')
     if refresh or not snapshot:
         series,errors=fetch_all(config,snapshot)
+        _warn_provider_errors(errors)
         if strict and errors:
             raise RuntimeError('Refresh incomplete; prior snapshot and published build were preserved: '+json.dumps(errors))
         if not series:
             raise RuntimeError('No source data available. Check network access and retry.')
+        # Fail closed only when a provider died and left no fresh or cached series behind.
+        recovered={e['provider'] for e in errors}
+        if recovered:
+            have=set()
+            for sid,s in series.items():
+                have.add('statcan' if s.get('pid') else ('bank_of_canada' if sid in ('fx','ca_rate') else 'supply_chain' if sid=='gscpi' else 'fred'))
+            stranded=sorted(recovered-have)
+            if stranded:
+                raise RuntimeError('Refresh left providers with no usable series: '+', '.join(stranded)+'; errors='+json.dumps(errors))
         snapshot={'generated_at':now(),'series':series,'errors':errors}
         policy=check_policies(policy,read_json(data/'policy_checks.json',{}))
         atomic_json(data/'policy_checks.json',{'checks':policy['checks']})
@@ -108,7 +126,7 @@ def build(refresh=False, strict=False):
     dist=ROOT/'dist';dist.mkdir(exist_ok=True)
     shutil.copytree(stage,dist,dirs_exist_ok=True);shutil.rmtree(stage)
     print(f"Built {len(snapshot['series'])} series and {len(payload['quarters'])} quarterly briefings. Snapshot: {snapshot['generated_at']}")
-    if snapshot['errors']:
+    if snapshot.get('errors'):
         print('WARNING: cached or missing providers:',', '.join(e['provider'] for e in snapshot['errors']))
     return payload
 
@@ -118,7 +136,7 @@ def main():
     commands=parser.add_subparsers(dest='command',required=True)
     b=commands.add_parser('build',help='Build a portable static dashboard')
     b.add_argument('--refresh',action='store_true',help='Fetch official data and rebuild')
-    b.add_argument('--strict',action='store_true',help='Abort if any data provider fails; preserve old output')
+    b.add_argument('--strict',action='store_true',help='Abort if any data provider fails; preserve old snapshot/output')
     s=commands.add_parser('serve',help='Serve only the public dist directory')
     s.add_argument('--host',default='127.0.0.1')
     s.add_argument('--port',type=int,default=int(os.environ.get('PORT','8080')))
